@@ -1,0 +1,16 @@
+os:
+  - linux
+dist: focal
+language: node_js
+node_js:
+  - 14.2.0
+cache:
+  directories:
+    - node_modules
+script:
+  - yarn build
+#deploy:
+#  skip_cleanup: true
+#  provider: firebase
+#  token:
+#    secure: ""

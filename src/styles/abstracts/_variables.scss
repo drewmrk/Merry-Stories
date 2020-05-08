@@ -1,0 +1,11 @@
+// Colors
+$color-primary: lighten($color: black, $amount: 15);
+$color-primary-text: darken($color: white, $amount: 5);
+$color-secondary: lighten($color: $color-primary, $amount: 5);
+$color-secondary-text: $color-primary-text;
+$color-success: #06d6a0;
+$color-success-text: $color-primary;
+$color-warning: darken($color: #e6f14a, $amount: 15);
+$color-warning-text: $color-primary;
+$color-error: #f25757;
+$color-error-text: $color-primary-text;
