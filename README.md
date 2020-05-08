@@ -1,5 +1,7 @@
 # Merry Stories
 
+[![Build Status](https://travis-ci.com/drewmrk/Merry-Stories.svg?branch=master)](https://travis-ci.com/drewmrk/Merry-Stories)
+
 Write happy, cheerful stories for others to enjoy.
 
 https://merrystories.com
