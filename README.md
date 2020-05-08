@@ -4,7 +4,7 @@
 
 Write happy, cheerful stories for others to enjoy.
 
-https://merrystories.com
+https://merry-stories.web.app
 
 ## Build
 
