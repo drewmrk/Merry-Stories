@@ -21,35 +21,43 @@
 
 <style lang="scss" scoped>
   .header {
+    @include desktop {
+      padding: 10px 10px;
+      justify-content: center;
+    }
+    @include mobile {
+      padding: 5px 10px;
+    }
     @include flex(row);
     background-color: $color-primary;
     align-items: center;
-    padding: 5px 10px;
     &--title {
       @include mobile {
+        flex: 1;
         font-size: 2.05em;
       }
       @include desktop {
-        font-size: 2.15em;
+        font-size: 2.75em;
+        letter-spacing: 0.01em;
       }
       color: $color-primary-text;
       font-weight: 400;
-      flex: 1;
+      
       &--link {
         @include hide-link-styles;
       }
     }
     &--toggle-nav-button {
-      cursor: pointer;
-      background-color: transparent;
-      border: 0;
+      @include mobile {
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+      }
+      @include desktop {
+        display: none;
+      }
       i {
-        @include mobile {
-          font-size: 2.5em;
-        }
-        @include desktop {
-          font-size: 2.75em;
-        }
+        font-size: 2.5em;
         color: $color-primary-text;
       }
     }
