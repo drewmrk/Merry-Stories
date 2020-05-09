@@ -8636,7 +8636,7 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-super-tiny-icons@^0.3.2:
+super-tiny-icons@0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/super-tiny-icons/-/super-tiny-icons-0.3.2.tgz#dfcb56265b3a3b04b26c7f9b462ba11c6ab58eb8"
   integrity sha512-+cYkdElhyJbNBNDMyXUdsh7BlgywqKjkBUylxgMYWmJawvBGxD29f3rpueMcj2RHoSrdJzHwsDFJciWxcTeR4Q==
