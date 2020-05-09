@@ -3,7 +3,7 @@
     <Hero :size="HeroSize.half" title="Write" class="hero" />
     <Form />
   </div>
-    <LoginRequired v-else/>
+  <LoginRequired v-else />
 </template>
 
 <script>
