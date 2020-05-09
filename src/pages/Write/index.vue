@@ -3,13 +3,11 @@
     <Hero :size="HeroSize.half" title="Write" class="hero" />
     <Form />
   </div>
-  <div v-else>
-    <NotFound />
-  </div>
+    <LoginRequired v-else/>
 </template>
 
 <script>
-  import NotFound from '@/pages/NotFound'
+  import LoginRequired from '@/components/LoginRequired'
   import { isLoggedIn, isBanned } from '@/database/variables'
   import Hero, { HeroSize } from '@/components/Hero'
   import Form from './Form'
@@ -17,7 +15,7 @@
   export default {
     name: 'Write',
     components: {
-      NotFound,
+      LoginRequired,
       Hero,
       Form
     },

@@ -7,14 +7,14 @@
       <Stories />
     </div>
   </div>
-  <NotFound v-else />
+  <LoginRequired v-else />
 </template>
 
 <script>
   import About from './About'
   import Actions from './Actions'
   import { isLoggedIn } from '@/database/variables'
-  import NotFound from '@/pages/NotFound'
+  import LoginRequired from '@/components/LoginRequired'
   import Hero, { HeroSize } from '@/components/Hero'
   import Stories from './Stories'
 
@@ -23,7 +23,7 @@
     components: {
       About,
       Actions,
-      NotFound,
+      LoginRequired,
       Hero,
       Stories
     },

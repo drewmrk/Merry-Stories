@@ -14,21 +14,21 @@
       :views="item.views"
     />
   </div>
-  <NotFound v-else />
+  <LoginRequired v-else />
 </template>
 
 <script>
   import Hero, { HeroSize } from '@/components/Hero'
   import { isLoggedIn } from '@/database/variables'
   import StoryComponent from '@/components/Story'
-  import NotFound from '@/pages/NotFound'
+  import LoginRequired from '@/components/LoginRequired'
   import { db } from '@/database/functions'
 
   export default {
     name: 'Stories',
     components: {
       Hero,
-      NotFound,
+      LoginRequired,
       StoryComponent
     },
     data() {

@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../pages/Home'
 import { isLoggedIn, isAdmin } from '@/database/variables'
-import { login } from '@/database/functions'
 
 Vue.use(VueRouter)
 
@@ -90,11 +89,6 @@ router.beforeEach(async (to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (await isLoggedIn) {
       next()
-    } else {
-      // Delay by 3s to avoid infinite login loop
-      setTimeout(() => {
-        login()
-      }, 3000)
     }
   } else {
     next()
