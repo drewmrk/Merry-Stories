@@ -103,8 +103,6 @@ router.beforeEach(async (to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAdmin)) {
     if (await isAdmin) {
       next()
-    } else {
-      router.push('/not-found')
     }
   } else {
     next()
