@@ -105,6 +105,7 @@
       width: 100%;
       display: block !important;
       position: sticky;
+      top: 0;
     }
     background-color: $color-secondary;
     align-items: center;
