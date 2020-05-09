@@ -96,41 +96,45 @@
 <style lang="scss" scoped>
   .nav {
     @include mobile {
+      @include flex(column);
       width: 100%;
       position: absolute;
     }
     @include desktop {
-      width: 30%;
-      position: fixed;
-      height: 100vh;
-      right: 0;
+      @include flex(row);
+      width: 100%;
+      display: block !important;
+      position: sticky;
     }
-    @include flex(column);
     background-color: $color-secondary;
     align-items: center;
     &--list {
+      @include desktop {
+        @include flex(row);
+      }
       list-style-type: none;
       width: 100%;
       &--item {
         @include mobile {
           font-size: 1.25em;
           text-align: left;
+          margin: 20px 0px;
         }
         @include desktop {
           text-align: center;
-          font-size: 1.75em;
+          font-size: 1.15em;
         }
         color: $color-secondary-text;
         width: 100%;
-        margin: 20px 0px;
         transition: 0.25s all;
+        &:hover {
+            background-color: $color-secondary-text;
+            color: $color-secondary;
+          }
         &:empty {
           display: none;
         }
-        &:hover {
-          background-color: $color-secondary-text;
-          color: $color-secondary;
-        }
+
         &--link {
           @include hide-link-styles;
           width: 100%;
@@ -141,17 +145,18 @@
       &--auth-button {
         @include mobile {
           text-align: left;
+          margin-bottom: 10px;
         }
         @include desktop {
           text-align: center;
-          font-size: 1.75em;
+          font-size: 1.15em;
         }
         border: 0;
         border-radius: initial;
         background-color: transparent;
         color: $color-secondary-text;
         width: 100%;
-        margin-bottom: 10px;
+        
       }
     }
   }
