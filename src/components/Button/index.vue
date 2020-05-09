@@ -49,9 +49,10 @@
   }
   // Types
   .button--type--normal {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-color: $color-primary;
+    @include shadow-2;
+    background-color: $color-primary;
     color: $color-primary-text;
+    border: 0;
     &:hover {
       background-color: $color-primary;
       color: $color-primary-text;

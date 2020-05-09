@@ -26,6 +26,7 @@
       @include flex(row);
     }
     background-color: $color-primary;
+    border-top: 1px solid grey;
     align-items: center;
     padding: 4px 10px;
     &--title {

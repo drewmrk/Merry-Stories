@@ -107,6 +107,7 @@
       position: sticky;
       top: 0;
     }
+    border-bottom: 1px solid grey;
     z-index: 1000;
     background-color: $color-secondary;
     align-items: center;
