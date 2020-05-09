@@ -114,13 +114,14 @@
       &--item {
         @include mobile {
           font-size: 1.25em;
+          text-align: left;
         }
         @include desktop {
+          text-align: center;
           font-size: 1.75em;
         }
         color: $color-secondary-text;
         width: 100%;
-        text-align: center;
         margin: 20px 0px;
         transition: 0.25s all;
         &:empty {
@@ -138,7 +139,11 @@
         }
       }
       &--auth-button {
+        @include mobile {
+          text-align: left;
+        }
         @include desktop {
+          text-align: center;
           font-size: 1.75em;
         }
         border: 0;
