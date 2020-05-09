@@ -129,9 +129,9 @@
         width: 100%;
         transition: 0.25s all;
         &:hover {
-            background-color: $color-secondary-text;
-            color: $color-secondary;
-          }
+          background-color: $color-secondary-text;
+          color: $color-secondary;
+        }
         &:empty {
           display: none;
         }
@@ -157,7 +157,6 @@
         background-color: transparent;
         color: $color-secondary-text;
         width: 100%;
-        
       }
     }
   }

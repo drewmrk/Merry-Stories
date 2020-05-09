@@ -42,7 +42,7 @@
       }
       color: $color-primary-text;
       font-weight: 400;
-      
+
       &--link {
         @include hide-link-styles;
       }

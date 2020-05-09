@@ -29,7 +29,7 @@
     <div
       v-if="
         (!isPreview && authorUid === auth().currentUser.uid) ||
-          (!isPreview && isAdmin)
+        (!isPreview && isAdmin)
       "
       class="header--controls"
     >
