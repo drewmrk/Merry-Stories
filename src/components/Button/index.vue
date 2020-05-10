@@ -41,7 +41,7 @@
   .button {
     @include shadow-2;
     padding: 6px 20px;
-    border-radius: 20px;
+    border-radius: 6.5px;
     transition: 0.25s all;
     border: 2.5px solid;
     cursor: pointer;
