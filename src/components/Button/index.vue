@@ -60,7 +60,7 @@
   .button--type--success {
     background-color: transparentize($color: $color-success, $amount: 0.5);
     border-color: $color-success;
-    color: $color-success-text;
+    color: $color-primary-text;
     &:hover {
       background-color: $color-success;
       color: $color-success-text;
