@@ -136,6 +136,7 @@
           text-align: center;
           font-size: 1.15em;
         }
+        box-shadow: none;
         border: 0;
         border-radius: initial;
         background-color: transparent;

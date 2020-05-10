@@ -39,6 +39,7 @@
 
 <style lang="scss" scoped>
   .button {
+    @include shadow-2;
     padding: 6px 20px;
     border-radius: 20px;
     transition: 0.25s all;
@@ -48,7 +49,6 @@
   }
   // Types
   .button--type--normal {
-    @include shadow-2;
     background-color: $color-primary;
     color: $color-primary-text;
     border: 0;
