@@ -5,7 +5,6 @@
 </template>
 
 <script>
-  // @flow
   export default {
     name: 'Button',
     props: {
