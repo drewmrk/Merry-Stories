@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 6.5px;
     background-color: white;
     border: 0;
     &--content {
