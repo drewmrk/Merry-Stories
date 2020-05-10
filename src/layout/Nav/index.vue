@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import { isLoggedIn } from '@/database/variables'
+  import { isLoggedIn, isAdmin } from '@/database/variables'
   import Button, { ButtonType } from '@/components/Button'
   import { login, logout } from '@/database/functions'
 
@@ -67,6 +67,11 @@
           isLoggedIn && {
             name: 'Stories',
             link: '/stories',
+            ident: Math.random()
+          },
+          isAdmin && {
+            name: 'Admin',
+            link: '/admin',
             ident: Math.random()
           }
         ]
