@@ -46,14 +46,9 @@
           .doc(
             window.location.href.substring(window.location.href.lastIndexOf('/') + 1)
           )
-          .set(
-            {
-              views: db.FieldValue.increment(1)
-            },
-            {
-              merge: true
-            }
-          )
+          .update({
+            views: db.FieldValue.increment(1)
+          })
           .catch(err => {
             console.error('An error occured while updating the view counter.')
             console.error(err)
