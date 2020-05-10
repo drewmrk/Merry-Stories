@@ -36,8 +36,8 @@
         width: 65%;
       }
       @include flex(column);
+      @include shadow-1;
       align-items: center;
-      box-shadow: 1px 1px 15px #00000042;
       margin: 0 auto;
       padding: 10px 20px;
       border-radius: 20px;
