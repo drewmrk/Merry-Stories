@@ -62,7 +62,7 @@ auth().onAuthStateChanged(user => {
         console.error('An error occurred while determining if the story exists.')
         console.error(err)
       })
-      db()
+    db()
       .collection('users')
       // Check URL to make sure it is not on the homepage
       // Otherwise, when on the homepage, firebase logs an error message to the console

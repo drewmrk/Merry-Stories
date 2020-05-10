@@ -61,7 +61,7 @@
     }
     &--version {
       @include mobile {
-      margin: 10px 0;
+        margin: 10px 0;
       }
       @include desktop {
         margin: 0px 10px;
