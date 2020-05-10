@@ -49,12 +49,13 @@
   }
   // Types
   .button--type--normal {
-    background-color: transparentize($color: $color-primary, $amount: 0.5);
+    background-color: $color-primary;
     color: $color-primary-text;
-    border-color: $color-primary;
+    border-color: transparentize($color: $color-primary-text, $amount: 0.35);
     &:hover {
       @include shadow-3;
       background-color: $color-primary;
+      border-color: $color-primary-text;
     }
   }
   .button--type--success {
