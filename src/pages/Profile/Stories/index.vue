@@ -3,6 +3,12 @@
     <h1 class="stories--title">
       Stories
     </h1>
+    <Button
+      @click.native="$router.push({ path: '/write' })"
+      :type="ButtonType.normal"
+      text="Write"
+      class="stories--button"
+    />
     <StoryComponent
       v-for="item in stories"
       :key="item.title"
@@ -19,18 +25,21 @@
 </template>
 
 <script>
+  import Button, { ButtonType } from '@/components/Button'
   import StoryComponent from '@/components/Story'
   import { db, auth } from '@/database/functions'
 
   export default {
     name: 'Stories',
     components: {
-      StoryComponent
+      StoryComponent,
+      Button
     },
     data() {
       return {
         db,
         auth,
+        ButtonType,
         stories: []
       }
     },
@@ -61,6 +70,9 @@
       text-align: center;
       font-weight: 400;
       margin: 15px 0;
+    }
+    &--button {
+      width: 100%;
     }
   }
 </style>
