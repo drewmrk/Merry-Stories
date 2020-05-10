@@ -40,7 +40,7 @@
       Footer
     },
     mounted() {
-      if (!this.isPreview) {
+      if (!this.isPreview && this.title !== '') {
         db()
           .collection('stories')
           .doc(
