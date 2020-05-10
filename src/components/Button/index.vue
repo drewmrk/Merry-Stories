@@ -53,6 +53,7 @@
     color: $color-primary-text;
     border: 0;
     &:hover {
+      @include shadow-3;
       background-color: $color-primary;
       color: $color-primary-text;
     }
