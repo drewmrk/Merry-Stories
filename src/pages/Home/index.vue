@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <Hero
+      :style="isLoggedIn ? '--align-items: initial;' : '--align-items: center;'"
       class="welcome-hero hero"
       :title="
         isLoggedIn
@@ -8,6 +9,7 @@
           : 'Write happy, cheerful stories for others to enjoy.'
       "
     >
+      <GoogleButton v-if="!isLoggedIn" class="google-login-button" />
       <Button
         v-if="isLoggedIn"
         :size="ButtonSize.large"
@@ -16,10 +18,11 @@
         @click.native="$router.push({ path: '/stories' })"
       />
       <Button
+        v-if="isLoggedIn"
         :size="ButtonSize.large"
-        :text="isLoggedIn ? 'Write a story' : 'Login with Google'"
+        text="Write a story"
         class="hero--button"
-        @click.native="isLoggedIn ? $router.push({ path: '/write' }) : login()"
+        @click.native="$router.push({ path: '/write' })"
       />
     </Hero>
     <Hero
@@ -57,12 +60,14 @@
   import Hero from '@/components/Hero'
   import Button, { ButtonSize } from '@/components/Button'
   import { login } from '@/database/functions'
+  import GoogleButton from '@/components/Button/Google'
 
   export default {
     name: 'Home',
     components: {
       Hero,
-      Button
+      Button,
+      GoogleButton
     },
     data() {
       return {
@@ -100,12 +105,21 @@
       }
     }
     .welcome-hero {
+      align-items: var(--align-items);
       background: linear-gradient(
           0deg,
           rgba(255, 255, 255, 0.5),
           rgba(255, 255, 255, 0.5)
         ),
         no-repeat center / cover url('/img/home/welcome-hero-bg.webp');
+      .google-login-button {
+        @include mobile {
+          zoom: 1.35;
+        }
+        @include desktop {
+          zoom: 1.65;
+        }
+      }
     }
     .free-hero {
       background-color: darken(
