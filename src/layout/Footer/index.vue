@@ -8,12 +8,22 @@
     <small class="footer--copyright">
       &copy; Drew Markel {{ new Date().getFullYear() }}
     </small>
+    <p class="footer--version">
+      {{ version }}
+    </p>
   </footer>
 </template>
 
 <script>
+  import { version } from '../../../package.json'
+
   export default {
-    name: 'Footer'
+    name: 'Footer',
+    data() {
+      return {
+        version
+      }
+    }
   }
 </script>
 
@@ -42,12 +52,21 @@
     &--copyright {
       @include mobile {
         font-size: 1.05em;
-        margin-top: 5px;
+        margin-top: 10px;
       }
       @include desktop {
         font-size: 1.1em;
       }
       color: $color-primary-text;
+    }
+    &--version {
+      @include mobile {
+      margin: 10px 0;
+      }
+      @include desktop {
+        margin: 0px 10px;
+      }
+      font-size: 0.8em;
     }
   }
 </style>
