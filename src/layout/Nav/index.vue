@@ -54,39 +54,21 @@
             link: '/faq',
             ident: Math.random()
           },
-          isLoggedIn
-            ? {
-                name: 'Profile',
-                link: '/profile',
-                ident: Math.random()
-              }
-            : {
-                name: '',
-                link: '',
-                ident: Math.random()
-              },
-          isLoggedIn
-            ? {
-                name: 'Write',
-                link: '/write',
-                ident: Math.random()
-              }
-            : {
-                name: '',
-                link: '',
-                ident: Math.random()
-              },
-          isLoggedIn
-            ? {
-                name: 'Stories',
-                link: '/stories',
-                ident: Math.random()
-              }
-            : {
-                name: '',
-                link: '',
-                ident: Math.random()
-              }
+          isLoggedIn && {
+            name: 'Profile',
+            link: '/profile',
+            ident: Math.random()
+          },
+          isLoggedIn && {
+            name: 'Write',
+            link: '/write',
+            ident: Math.random()
+          },
+          isLoggedIn && {
+            name: 'Stories',
+            link: '/stories',
+            ident: Math.random()
+          }
         ]
       }
     }
