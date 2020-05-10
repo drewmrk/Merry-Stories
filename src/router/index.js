@@ -1,7 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../pages/Home'
-import { isLoggedIn, isAdmin } from '@/database/variables'
+import {
+  isLoggedIn,
+  isAdmin,
+  doesStoryExist,
+  doesUserExist
+} from '@/database/variables'
 
 Vue.use(VueRouter)
 
@@ -100,6 +105,22 @@ router.beforeEach(async (to, from, next) => {
     }
   } else {
     next()
+  }
+  // Check if the story exists
+  if (to.matched.some(record => record.name === 'Story')) {
+    if (await doesStoryExist) {
+      next()
+    } else {
+      router.push('/whoops')
+    }
+  }
+  // Check if the user exists
+  if (to.matched.some(record => record.name === 'User')) {
+    if (await doesUserExist) {
+      next()
+    } else {
+      router.push('/whoops')
+    }
   }
 })
 

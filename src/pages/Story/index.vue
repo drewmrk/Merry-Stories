@@ -1,5 +1,5 @@
 <template>
-  <div v-if="storyData.title" class="page">
+  <div class="page">
     <Hero
       :size="HeroSize.half"
       :title="storyData.title"
@@ -17,21 +17,18 @@
       :views="storyData.views"
     />
   </div>
-  <NotFound v-else />
 </template>
 
 <script>
   import StoryComponent from '@/components/Story'
   import Hero, { HeroSize } from '@/components/Hero'
   import { db } from '@/database/functions'
-  import NotFound from '@/pages/NotFound'
 
   export default {
     name: 'Story',
     components: {
       StoryComponent,
-      Hero,
-      NotFound
+      Hero
     },
     data() {
       return {
