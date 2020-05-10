@@ -46,7 +46,6 @@
   .recent-stories {
     @include mobile {
       overflow-x: auto;
-      margin: 0px 10px;
     }
     @include desktop {
       justify-content: center;
@@ -59,14 +58,19 @@
     &--icon {
       @include mobile {
         font-size: 1.75em;
+        margin: 0px 10px;
       }
       @include desktop {
         font-size: 2em;
       }
     }
     &--list {
+      @include mobile {
+        margin: 0px 10px;
+      }
       @include flex(row);
       list-style-type: none;
+      background-color: $color-primary;
       &--item {
         margin: 0px 10px;
         border-bottom: 1.5px solid transparent;
