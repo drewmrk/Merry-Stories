@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <Nav />
+    <RecentStories />
     <main id="main">
       <router-view />
     </main>
@@ -12,6 +13,7 @@
 <script>
   import Header from '@/layout/Header'
   import Nav from './layout/Nav'
+  import RecentStories from './layout/RecentStories'
   import Footer from './layout/Footer'
 
   export default {
@@ -19,6 +21,7 @@
     components: {
       Header,
       Nav,
+      RecentStories,
       Footer
     }
   }
