@@ -24,7 +24,7 @@
     "vuex": "3.5.1"
   },
   "devDependencies": {
-    "@babel/core": "7.10.5",
+    "@babel/core": "7.14.5",
     "@vue/cli-plugin-babel": "4.4.6",
     "@vue/cli-plugin-eslint": "4.4.6",
     "@vue/cli-plugin-pwa": "4.4.6",
@@ -33,7 +33,7 @@
     "@vue/cli-service": "4.4.6",
     "@vue/eslint-config-prettier": "6.0.0",
     "babel-eslint": "10.1.0",
-    "babel-loader": "8.1.0",
+    "babel-loader": "8.2.2",
     "babel-preset-vue": "2.0.2",
     "cssnano": "4.1.10",
     "eslint": "7.5.0",
